@@ -1,17 +1,22 @@
 const express = require('express');
 const connectDB = require('./db');
 const cors = require('cors');
-//const routes = require('../backend/routes');
+const assignmentRoutes = require('../backend/routes/assignmentsRoute');
 require('dotenv').config();
+const dataSetupRoutes = require('../backend/routes/dataSetUpRoute');
 
 const app = express();
 
 //connect DB
 connectDB();
 
-app.use(cors());
+//connect assignments route
+app.use('/api/project_assignments', assignmentRoutes);
 
-// app.use('/api', routes);
+//connect data set up route
+app.use('/api', dataSetupRoutes); 
+
+app.use(cors());
 
 //body parser
 app.use(express.json());
