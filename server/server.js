@@ -2,24 +2,25 @@ const express = require('express');
 const connectDB = require('./db');
 const cors = require('cors');
 const assignmentRoutes = require('../backend/routes/assignmentsRoute');
-require('dotenv').config();
 const dataSetupRoutes = require('../backend/routes/dataSetUpRoute');
+const projectRoutes = require('../backend/routes/projectRoute'); 
+require('dotenv').config();
 
 const app = express();
 
 //connect DB
 connectDB();
 
-//connect assignments route
-app.use('/api/project_assignments', assignmentRoutes);
+//body parser
+app.use(express.json());
 
+//connect routes
+app.use('/api/project_assignments', assignmentRoutes);
+app.use('/api', projectRoutes);
 //connect data set up route
 app.use('/api', dataSetupRoutes); 
 
 app.use(cors());
-
-//body parser
-app.use(express.json());
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {

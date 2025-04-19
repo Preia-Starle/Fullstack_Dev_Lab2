@@ -1,6 +1,4 @@
 const Assignment = require ('../models/assignmentModels');
-const Employee = require('../models/employeeModels');
-const Project = require('../models/projectModels');
 
 const getAllAssignments = async (req, res) => {
     try {
@@ -14,5 +12,6 @@ const getAllAssignments = async (req, res) => {
         res.status(500).json({message: 'Error fetching assignments.', error});
     }
 }
+
 
 module.exports = {getAllAssignments};
