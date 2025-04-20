@@ -4,6 +4,7 @@ const assignmentsController = require('../controllers/assignmentsController');
 
 //get all asignments
 router.get('/', assignmentsController.getAllAssignments);
+router.post('/', assignmentsController.assignEmployee);
 
 
 
