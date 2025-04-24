@@ -5,7 +5,6 @@ import ProjectAssignmentsTable from '../src/components/ProjectAssignmentsTable';
 function App() {
   return (
     <div>
-    <h1>Project Management</h1>
     <ProjectAssignmentsTable />
   </div>
 );

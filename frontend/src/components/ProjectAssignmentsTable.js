@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'; 
+import styles from '../components/ProjectAssignmentsTable.module.css';
 
 const ProjectAssignmentsTable = () => {
   //hook for storing data from backend
@@ -22,24 +23,24 @@ const ProjectAssignmentsTable = () => {
     //render the table
     return (
     <div>
-    <h2>Project Assignments</h2>
-    <table>
+    <h2 className={styles.mainHeader}>Project Assignments</h2>
+    <table className={styles.assignmentsTable}>
       <thead>
         <tr>
-          <th>Employee ID</th>
-          <th>Employee Name</th>
-          <th>Project Name</th>
-          <th>Start Date</th>
+          <th className={styles.tableHeader}>Employee ID</th>
+          <th className={styles.tableHeader}>Employee Name</th>
+          <th className={styles.tableHeader}>Project Name</th>
+          <th className={styles.tableHeader}>Start Date</th>
         </tr>
       </thead>
       <tbody>
         {/* Map over the assignments and display them in table rows */}
         {assignments.map((assignment) => (
           <tr key={assignment._id}>
-            <td>{assignment.employee_id._id}</td>
-            <td>{assignment.employee_id.full_name}</td>
-            <td>{assignment.project_code.project_name}</td>
-            <td>{new Date(assignment.start_date).toLocaleDateString()}</td>
+            <td className={styles.tableCell}>{assignment.employee_id._id}</td>
+            <td className={styles.tableCell}>{assignment.employee_id.full_name}</td>
+            <td className={styles.tableCell}>{assignment.project_code.project_name}</td>
+            <td className={styles.tableCell}>{new Date(assignment.start_date).toLocaleDateString()}</td>
           </tr>
         ))}
       </tbody>

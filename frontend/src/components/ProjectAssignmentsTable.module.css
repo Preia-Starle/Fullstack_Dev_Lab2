@@ -1,0 +1,29 @@
+.mainHeader {
+    margin: 1rem;
+    color: #09122C;
+}
+
+.assignmentsTable {
+    margin: 1rem;
+    width: 80%;
+    height: 40vmin;
+    border-collapse: collapse;
+    pointer-events: none;
+    background-color: #C8AAAA;
+    color: #09122C;
+}
+  
+.tableHeader, .tableCell {
+    padding: 3rem;
+    border: 0.3rem solid #574964;
+    text-align: left;
+}
+  
+.tableHeader {
+    background-color: #FFDAB3;
+}
+  
+.assignmentsTable tr:hover {
+    background-color: #f1f1f1;
+}
+  
