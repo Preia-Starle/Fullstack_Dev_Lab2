@@ -9,6 +9,8 @@ require('dotenv').config();
 
 const app = express();
 
+app.use(cors());
+
 //connect DB
 connectDB();
 
@@ -22,8 +24,6 @@ app.use('/api', employeeRoutes);
 
 //connect data set up route
 app.use('/api', dataSetupRoutes); 
-
-app.use(cors());
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {

@@ -7,7 +7,8 @@ const getAllAssignments = async (req, res) => {
         const assignments = await Assignment.find()
         .populate('employee_id', 'full_name email') 
         .populate('project_code', 'project_name project_description');
-        console.log(assignments);
+        //debug
+        //console.log(assignments);
 
         res.status(200).json(assignments);
     } catch (error) {
