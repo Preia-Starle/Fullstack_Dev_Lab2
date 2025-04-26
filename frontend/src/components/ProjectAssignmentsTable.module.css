@@ -19,11 +19,33 @@
     text-align: left;
 }
   
-.tableHeader {
-    background-color: #FFDAB3;
-}
-  
 .assignmentsTable tr:hover {
     background-color: #f1f1f1;
 }
+
+
+.tableHeader {
+    cursor: pointer;
+    background-color: #FFDAB3;
+    text-align: left;
+    font-weight: bold;
+    user-select: none;
+  }
+  
+  /* sorting css */
+  .sortedAsc::after {
+    content: ' 🔼';
+    font-size: 1rem;
+  }
+  
+  .sortedDesc::after {
+    content: ' 🔽'; 
+    font-size: 1rem;
+  }
+
+  th {
+    pointer-events: auto; 
+  }
+
+  
   
