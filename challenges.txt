@@ -1,0 +1,3 @@
+Setting up the development environment with all the dependencies took quite a bit of time. 
+Especially ensuring that both the frontend and backend worked in sync and concurrently. 
+Even something as simple as configuring the gitignore correctly to address both environments.
